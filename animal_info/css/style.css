@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0; }
+
+/* Убираем внешние отступы */
+/* Выставляем основные настройки по-умолчанию для body */
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+  /* Упрощаем работу с изображениями */
+  /* Указываем понятную периодичность в потоке данных у article*/
+  /* Наследуем шрифты для инпутов и кнопок */ }
+  blockquote ul[class],
+  blockquote ol[class], q ul[class],
+  q ol[class] {
+    list-style: none; }
+  blockquote a:not([class]), q a:not([class]) {
+    text-decoration-skip-ink: auto; }
+  blockquote img, q img {
+    max-width: 100%;
+    display: block; }
+  blockquote article > * + *, q article > * + * {
+    margin-top: 1em; }
+  blockquote input,
+  blockquote button,
+  blockquote textarea,
+  blockquote select, q input,
+  q button,
+  q textarea,
+  q select {
+    font: inherit; }
+
+input {
+  border: none;
+  outline: none; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../fonts/georgia.eot");
+  src: local("☺"), url("../../fonts/georgia.woff") format("woff"), url("../../../fonts/georgia.ttf") format("truetype"), url("../../fonts/georgia.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Arial-MT';
+  src: url("../../fonts/arial.eot");
+  src: local("☺"), url("../../fonts/arial.woff") format("woff"), url("../../fonts/arial.ttf") format("truetype"), url("../../fonts/arial.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa; }
+
+.animals__info-item-close-wrap {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  top: -70px;
+  right: 10%;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+  .animals__info-item-close-wrap:hover {
+    background-color: #f1cdb3;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease; }
+
+.animals__info-item-close {
+  position: relative;
+  content: "";
+  height: 100%;
+  width: 100%; }
+
+.animals__info-item-close:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 14px;
+  background-color: #000;
+  top: 21px;
+  left: 16px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.animals__info-item-close:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 14px;
+  background-color: #000;
+  top: 21px;
+  left: 16px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+.animals__info-item {
+  position: relative;
+  margin-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 970px;
+  width: 100%;
+  min-height: 470px;
+  -webkit-box-shadow: 0 2px 30px 5px rgba(13, 13, 13, 0.04);
+  box-shadow: 0 2px 30px 5px rgba(13, 13, 13, 0.04);
+  border-radius: 9px;
+  background-color: #fafafa; }
+  .animals__info-item img {
+    max-width: 470px;
+    width: 100%; }
+
+.animals__item-title-header {
+  color: #545454;
+  font-family: 'Georgia';
+  font-size: 20px;
+  font-weight: 400;
+  /* Text style for "J, ennifer" */
+  font-size: 35px;
+  letter-spacing: 2.1px;
+  line-height: 45px; }
+
+.animals__item-title-text {
+  color: #545454;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  /* Text style for "P, ooch +" */
+  letter-spacing: 1.2px;
+  line-height: 34px; }
+
+.animals__item-text {
+  max-width: 400px;
+  width: 100%;
+  color: #4c4c4c;
+  font-family: "Arial-MT";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px; }
+
+.animals__info-list {
+  margin-top: 30px; }
+
+.animals__item-text-wrap {
+  padding-right: 40px;
+  padding-top: 55px;
+  padding-left: 55px; }
+
+.point {
+  color: #f1cdb3;
+  font-family: Georgia;
+  letter-spacing: 1.02px; }
+
+.animals__info-list-item {
+  /* Text style for "2 months" */
+  letter-spacing: 0.9px;
+  line-height: 34px;
+  color: #545454;
+  font-family: "Arial-MT";
+  font-size: 15px;
+  font-weight: 400; }
+
+.animals__info-list-item-span {
+  color: #5c5c5c;
+  font-family: 'Georgia';
+  font-size: 17px;
+  letter-spacing: 1.02px; }
+
+.animals__info-item-wrap {
+  position: relative; }
+
+@media screen and (max-width: 850px) {
+  .animals__info-item {
+    padding-bottom: 40px;
+    padding-top: 30px; }
+  .animals__info-item {
+    display: block;
+    text-align: center; }
+  .animals__item-text {
+    margin: 0 auto; }
+  .animals__info-list {
+    text-align: left;
+    display: inline-block; } }
+
+@media screen and (max-width: 425px) {
+  .animals__item-text {
+    font-size: 13px; } }

@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".burger__btn").click(function(n){$(".menu,.burger__btn").toggleClass("active")})});

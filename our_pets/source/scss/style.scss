@@ -1,0 +1,288 @@
+@import "nullstyle.scss";
+
+@font-face {
+	font-family: 'Georgia';
+	src: url('../../fonts/georgia.eot');
+	src: local('☺'), url('../../fonts/georgia.woff') format('woff'), url('../../../fonts/georgia.ttf') format('truetype'), url('../../fonts/georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Arial-MT';
+	src: url('../../fonts/arial.eot');
+	src: local('☺'), url('../../fonts/arial.woff') format('woff'), url('../../fonts/arial.ttf') format('truetype'), url('../../fonts/arial.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+header{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #fafafa;
+	height: 112px;
+}
+.logo__header{
+	color: #545454;
+	font-family: 'Georgia';
+	font-size: 32px;
+	font-weight: 400;
+	
+	/* Text style for "C, ozy Hou" */
+	letter-spacing: 1.13px;
+}
+.logo__text{
+	color: #292929;
+	font-family: "Arial-MT";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 29px;
+	/* Text style for "Shelter fo" */
+	letter-spacing: 1.3px;
+}
+.header__top-part{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu{
+	max-width: 475px;
+	width: 100%;
+}
+.menu__list{
+
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+}
+.menu__list-item{
+	position: relative;
+	margin-bottom: 5px;
+	&:hover .hover__line{
+		background-color: #f1cdb3;
+		transition: all  .3s ease;
+	}
+}
+.menu__list-link{
+	color: #545454;
+	font-family: "Arial-MT";
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 29px;
+	text-decoration: none;
+
+}
+.hover__line{
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	border-radius: 2px;
+	background-color: transparent;
+	transition: all  .3s ease;
+}
+.second--section__header{
+	text-align: center;
+	max-width:395px;
+	width: 100%;
+	color: #545454;
+	font-family: Georgia;
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 45px;
+	/* Text style for "O, ur frie" */
+	letter-spacing: 2.1px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.second--section{
+	background-color: #f6f6f6;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.second--section__item{
+	padding-top: 33px;
+	text-align: center;
+	max-width: 270px;
+	width: 100%;
+	margin-top: 30px;
+	border-radius: 9px;
+	background-color: #fafafa;
+	padding-bottom: 35px;
+	img{
+		height: 270px;
+	}
+}
+.second--section__item-name{
+	color: #545454;
+	font-family: 'Georgia';
+	font-size: 20px;
+	font-weight: 400;
+	margin-top: 30px;
+	/* Text style for "K, atrine" */
+	letter-spacing: 1.2px;
+}
+.learn-more{
+	display: block;
+	color: #292929;
+	font-family: 'Georgia';
+	font-size: 17px;
+	font-weight: 400;
+
+	/* Text style for "L, earn Mo" */
+	letter-spacing: 1.02px;
+	max-width: 188px;
+	width: 100%;
+	min-height: 52px;
+	border-radius: 30px;
+	border: 2px solid #f1cdb3;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 18px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 30px auto;
+	transition: all .3s ease;
+	&:hover{
+		background-color: #f1cdb3;
+		transition: all .3s ease;
+	}
+}
+.second--section__items{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+footer{
+	background-image: url(../../img/footer_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:  center;
+	padding:75px 0;
+}
+.footer__header{
+	max-width: 280px;
+	width: 100%;
+	color: #ffffff;
+	font-family: 'Georgia';
+	font-size: 35px;
+	font-weight: 400;
+	line-height: 45px;
+	/* Text style for "F, or ques" */
+	letter-spacing: 2.1px;
+}
+.footer__contact-item{
+	display: flex;
+	justify-content: space-between;
+	max-width: 300px;
+	width: 100%;
+	align-items: center;
+	margin-top: 40px;
+	
+}
+.footer__contact-item-text{
+	max-width: 250px;
+	width: 100%;
+	color: #f1cdb3;
+	font-size: 20px;
+	font-weight: 400;
+	/* Text style for "B, oston," */
+	letter-spacing: 1.2px;
+	margin-left: 20px;
+}
+.footer__contact-wrap{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.footer__content-wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 750px;
+	width: 100%;
+}
+.burger__btn{
+	display: none;
+}
+@media screen and (max-width:992px){
+	.menu{
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%,-200%);
+		transition: all .8s ease;
+		&.active{
+			transition: all .8s ease;
+			transform: translate(-50%,60%);
+		}
+	}
+	.menu__list{
+		display: block;
+
+	}
+	.menu__list-item{
+		text-align: center;
+		border-radius: 5px;
+		border:3px solid #000;
+		background-color: #fff;
+	}
+	.burger__btn{
+		transition: all .3s ease;
+		position: relative;
+		display: block;
+
+		width: 30px;
+		height: 20px;
+		
+		& span{
+			position: absolute;
+			background-color: #000;
+			height: 2px;
+			width: 100%;
+			top:9px;
+			transition: all 0.8s ease ;
+		}
+		&:before,
+		&:after{
+			content: "";
+			background-color: #000;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			transition: all 0.8s ease;
+		}
+
+		&.active:before {
+			transform: rotate(-45deg);
+			top:9px;
+			width: 30px;
+			transition: all 0.8s ease;
+		}
+		&.active span{
+			display: none;	
+			transition: all 0.8s ease;
+
+		}
+		&.active:after {
+			transform: rotate(45deg);
+			bottom:9px;
+			width: 30;
+			transition: all 0.8s ease;
+		}
+		&:before{
+			top:0px;
+			transition: all 0.8s ease;
+		}
+		&:after{
+			bottom:0px;
+			transition: all 0.8s ease;
+		}
+
+	}
+
+}
+@media screen and (max-width:625px){
+	.footer__content-wrap{
+		justify-content: center;
+	}
+	.footer__contact-wrap{
+		text-align: center;
+		margin-top: 20px;
+	}
+}
